@@ -1,0 +1,10 @@
+C:\Users\Mscs\source\repos\TrackMyTime\TrackMyTime\bin\Debug\TrackMyTime.exe.config
+C:\Users\Mscs\source\repos\TrackMyTime\TrackMyTime\bin\Debug\TrackMyTime.exe
+C:\Users\Mscs\source\repos\TrackMyTime\TrackMyTime\bin\Debug\TrackMyTime.pdb
+C:\Users\Mscs\source\repos\TrackMyTime\TrackMyTime\obj\Debug\TrackMyTime.csproj.AssemblyReference.cache
+C:\Users\Mscs\source\repos\TrackMyTime\TrackMyTime\obj\Debug\TrackMyTime.Properties.Resources.resources
+C:\Users\Mscs\source\repos\TrackMyTime\TrackMyTime\obj\Debug\TrackMyTime.TimeTracker.resources
+C:\Users\Mscs\source\repos\TrackMyTime\TrackMyTime\obj\Debug\TrackMyTime.csproj.GenerateResource.cache
+C:\Users\Mscs\source\repos\TrackMyTime\TrackMyTime\obj\Debug\TrackMyTime.csproj.CoreCompileInputs.cache
+C:\Users\Mscs\source\repos\TrackMyTime\TrackMyTime\obj\Debug\TrackMyTime.exe
+C:\Users\Mscs\source\repos\TrackMyTime\TrackMyTime\obj\Debug\TrackMyTime.pdb
