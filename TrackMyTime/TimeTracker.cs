@@ -46,6 +46,7 @@ namespace TrackMyTime
             timer1.Start();
             ResetTime();
             isActive = false;
+            comboBox1.SelectedIndex = 0;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -289,9 +290,11 @@ namespace TrackMyTime
             acthr.Text = String.Format("{0:00}", activehrs);
             actmin.Text = String.Format("{0:00}", activemins);
             actsec.Text = String.Format("{0:00}", activesecs);
+            comboBox1.SelectedIndex = 0;
             idlehrs.Text = String.Format("{0:00}", idhrs);
             idlemins.Text = String.Format("{0:00}", idmins);
             idlesecs.Text = String.Format("{0:00}", idsecs);
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

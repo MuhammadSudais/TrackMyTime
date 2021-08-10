@@ -116,13 +116,12 @@ namespace TrackMyTime
             this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(441, 305);
+            this.panel1.Size = new System.Drawing.Size(552, 344);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // comboBox1
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.comboBox1.DropDownHeight = 98;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -156,12 +155,13 @@ namespace TrackMyTime
             "23",
             "24",
             "25"});
-            this.comboBox1.Location = new System.Drawing.Point(380, 147);
+            this.comboBox1.Location = new System.Drawing.Point(436, 167);
             this.comboBox1.MaxDropDownItems = 10;
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(44, 21);
             this.comboBox1.TabIndex = 24;
             this.comboBox1.TabStop = false;
+            this.comboBox1.Tag = "";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
@@ -171,7 +171,7 @@ namespace TrackMyTime
             this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(299, 256);
+            this.button1.Location = new System.Drawing.Point(355, 276);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 36);
             this.button1.TabIndex = 23;
@@ -185,7 +185,7 @@ namespace TrackMyTime
             this.label7.Font = new System.Drawing.Font("DS-Digital", 14.25F);
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(328, 149);
+            this.label7.Location = new System.Drawing.Point(384, 169);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(13, 19);
             this.label7.TabIndex = 22;
@@ -199,7 +199,7 @@ namespace TrackMyTime
             this.label6.Font = new System.Drawing.Font("DS-Digital", 14.25F);
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(276, 149);
+            this.label6.Location = new System.Drawing.Point(332, 169);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(13, 19);
             this.label6.TabIndex = 21;
@@ -213,7 +213,7 @@ namespace TrackMyTime
             this.label5.Font = new System.Drawing.Font("DS-Digital", 14.25F);
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(328, 106);
+            this.label5.Location = new System.Drawing.Point(384, 126);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(13, 19);
             this.label5.TabIndex = 20;
@@ -227,7 +227,7 @@ namespace TrackMyTime
             this.label4.Font = new System.Drawing.Font("DS-Digital", 14.25F);
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(276, 105);
+            this.label4.Location = new System.Drawing.Point(332, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(13, 19);
             this.label4.TabIndex = 19;
@@ -241,7 +241,7 @@ namespace TrackMyTime
             this.label3.Font = new System.Drawing.Font("DS-Digital", 14.25F);
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(328, 55);
+            this.label3.Location = new System.Drawing.Point(384, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(13, 19);
             this.label3.TabIndex = 18;
@@ -255,7 +255,7 @@ namespace TrackMyTime
             this.label2.Font = new System.Drawing.Font("DS-Digital", 14.25F);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(276, 55);
+            this.label2.Location = new System.Drawing.Point(332, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(13, 19);
             this.label2.TabIndex = 17;
@@ -270,7 +270,7 @@ namespace TrackMyTime
             this.idlesecs.Font = new System.Drawing.Font("DS-Digital", 14.25F);
             this.idlesecs.ForeColor = System.Drawing.SystemColors.Window;
             this.idlesecs.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.idlesecs.Location = new System.Drawing.Point(347, 149);
+            this.idlesecs.Location = new System.Drawing.Point(403, 169);
             this.idlesecs.Name = "idlesecs";
             this.idlesecs.Size = new System.Drawing.Size(27, 19);
             this.idlesecs.TabIndex = 16;
@@ -285,7 +285,7 @@ namespace TrackMyTime
             this.idlemins.Font = new System.Drawing.Font("DS-Digital", 14.25F);
             this.idlemins.ForeColor = System.Drawing.SystemColors.Window;
             this.idlemins.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.idlemins.Location = new System.Drawing.Point(295, 149);
+            this.idlemins.Location = new System.Drawing.Point(351, 169);
             this.idlemins.Name = "idlemins";
             this.idlemins.Size = new System.Drawing.Size(27, 19);
             this.idlemins.TabIndex = 15;
@@ -300,7 +300,7 @@ namespace TrackMyTime
             this.actsec.Font = new System.Drawing.Font("DS-Digital", 14.25F);
             this.actsec.ForeColor = System.Drawing.SystemColors.Window;
             this.actsec.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.actsec.Location = new System.Drawing.Point(347, 106);
+            this.actsec.Location = new System.Drawing.Point(403, 126);
             this.actsec.Name = "actsec";
             this.actsec.Size = new System.Drawing.Size(27, 19);
             this.actsec.TabIndex = 14;
@@ -315,7 +315,7 @@ namespace TrackMyTime
             this.actmin.Font = new System.Drawing.Font("DS-Digital", 14.25F);
             this.actmin.ForeColor = System.Drawing.SystemColors.Window;
             this.actmin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.actmin.Location = new System.Drawing.Point(295, 105);
+            this.actmin.Location = new System.Drawing.Point(351, 125);
             this.actmin.Name = "actmin";
             this.actmin.Size = new System.Drawing.Size(27, 19);
             this.actmin.TabIndex = 13;
@@ -330,7 +330,7 @@ namespace TrackMyTime
             this.totalsecs.Font = new System.Drawing.Font("DS-Digital", 14.25F);
             this.totalsecs.ForeColor = System.Drawing.SystemColors.Window;
             this.totalsecs.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.totalsecs.Location = new System.Drawing.Point(347, 55);
+            this.totalsecs.Location = new System.Drawing.Point(403, 75);
             this.totalsecs.Name = "totalsecs";
             this.totalsecs.Size = new System.Drawing.Size(27, 19);
             this.totalsecs.TabIndex = 12;
@@ -345,7 +345,7 @@ namespace TrackMyTime
             this.totalmins.Font = new System.Drawing.Font("DS-Digital", 14.25F);
             this.totalmins.ForeColor = System.Drawing.SystemColors.Window;
             this.totalmins.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.totalmins.Location = new System.Drawing.Point(295, 55);
+            this.totalmins.Location = new System.Drawing.Point(351, 75);
             this.totalmins.Name = "totalmins";
             this.totalmins.Size = new System.Drawing.Size(27, 19);
             this.totalmins.TabIndex = 11;
@@ -360,7 +360,7 @@ namespace TrackMyTime
             this.totalhr.Font = new System.Drawing.Font("DS-Digital", 14.25F);
             this.totalhr.ForeColor = System.Drawing.SystemColors.Window;
             this.totalhr.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.totalhr.Location = new System.Drawing.Point(243, 55);
+            this.totalhr.Location = new System.Drawing.Point(299, 75);
             this.totalhr.Name = "totalhr";
             this.totalhr.Size = new System.Drawing.Size(27, 19);
             this.totalhr.TabIndex = 10;
@@ -375,7 +375,7 @@ namespace TrackMyTime
             this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(9, 55);
+            this.label1.Location = new System.Drawing.Point(65, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 20);
             this.label1.TabIndex = 9;
@@ -389,7 +389,7 @@ namespace TrackMyTime
             this.stop.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.stop.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stop.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.stop.Location = new System.Drawing.Point(165, 256);
+            this.stop.Location = new System.Drawing.Point(221, 276);
             this.stop.Name = "stop";
             this.stop.Size = new System.Drawing.Size(105, 36);
             this.stop.TabIndex = 8;
@@ -403,7 +403,7 @@ namespace TrackMyTime
             this.Startbtn1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Startbtn1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Startbtn1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Startbtn1.Location = new System.Drawing.Point(25, 256);
+            this.Startbtn1.Location = new System.Drawing.Point(81, 276);
             this.Startbtn1.Name = "Startbtn1";
             this.Startbtn1.Size = new System.Drawing.Size(105, 36);
             this.Startbtn1.TabIndex = 7;
@@ -418,7 +418,7 @@ namespace TrackMyTime
             this.idlehrs.Font = new System.Drawing.Font("DS-Digital", 14.25F);
             this.idlehrs.ForeColor = System.Drawing.SystemColors.Window;
             this.idlehrs.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.idlehrs.Location = new System.Drawing.Point(243, 149);
+            this.idlehrs.Location = new System.Drawing.Point(299, 169);
             this.idlehrs.Name = "idlehrs";
             this.idlehrs.Size = new System.Drawing.Size(27, 19);
             this.idlehrs.TabIndex = 6;
@@ -433,7 +433,7 @@ namespace TrackMyTime
             this.acthr.Font = new System.Drawing.Font("DS-Digital", 14.25F);
             this.acthr.ForeColor = System.Drawing.SystemColors.Window;
             this.acthr.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.acthr.Location = new System.Drawing.Point(243, 106);
+            this.acthr.Location = new System.Drawing.Point(299, 126);
             this.acthr.Name = "acthr";
             this.acthr.Size = new System.Drawing.Size(27, 19);
             this.acthr.TabIndex = 5;
@@ -448,9 +448,9 @@ namespace TrackMyTime
             this.actualtime.Font = new System.Drawing.Font("DS-Digital", 14.25F);
             this.actualtime.ForeColor = System.Drawing.SystemColors.Window;
             this.actualtime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.actualtime.Location = new System.Drawing.Point(264, 194);
+            this.actualtime.Location = new System.Drawing.Point(320, 214);
             this.actualtime.Name = "actualtime";
-            this.actualtime.Size = new System.Drawing.Size(93, 19);
+            this.actualtime.Size = new System.Drawing.Size(85, 19);
             this.actualtime.TabIndex = 4;
             this.actualtime.Text = "00:00:00:00";
             this.actualtime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -463,7 +463,7 @@ namespace TrackMyTime
             this.idletime.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idletime.ForeColor = System.Drawing.SystemColors.Window;
             this.idletime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.idletime.Location = new System.Drawing.Point(21, 144);
+            this.idletime.Location = new System.Drawing.Point(77, 164);
             this.idletime.Name = "idletime";
             this.idletime.Size = new System.Drawing.Size(88, 24);
             this.idletime.TabIndex = 3;
@@ -478,7 +478,7 @@ namespace TrackMyTime
             this.activetime.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activetime.ForeColor = System.Drawing.SystemColors.Window;
             this.activetime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.activetime.Location = new System.Drawing.Point(9, 103);
+            this.activetime.Location = new System.Drawing.Point(65, 123);
             this.activetime.Name = "activetime";
             this.activetime.Size = new System.Drawing.Size(116, 20);
             this.activetime.TabIndex = 2;
@@ -493,7 +493,7 @@ namespace TrackMyTime
             this.CurrentTime.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CurrentTime.ForeColor = System.Drawing.SystemColors.Window;
             this.CurrentTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.CurrentTime.Location = new System.Drawing.Point(9, 190);
+            this.CurrentTime.Location = new System.Drawing.Point(65, 210);
             this.CurrentTime.Name = "CurrentTime";
             this.CurrentTime.Size = new System.Drawing.Size(110, 23);
             this.CurrentTime.TabIndex = 1;
@@ -508,7 +508,7 @@ namespace TrackMyTime
             this.TextView.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextView.ForeColor = System.Drawing.SystemColors.Window;
             this.TextView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.TextView.Location = new System.Drawing.Point(126, 3);
+            this.TextView.Location = new System.Drawing.Point(182, 23);
             this.TextView.Name = "TextView";
             this.TextView.Size = new System.Drawing.Size(163, 36);
             this.TextView.TabIndex = 0;
@@ -520,7 +520,7 @@ namespace TrackMyTime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 305);
+            this.ClientSize = new System.Drawing.Size(552, 344);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "TimeTracker";
