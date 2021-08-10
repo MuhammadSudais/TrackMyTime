@@ -26,28 +26,7 @@ namespace TrackMyTime
         int idmins;
         int idsecs;
         bool isActive;
-        private void ResetTime()
-        {
-            hr = 0;
-            min = 0;
-            sec = 0;
-            activesecs = 0;
-            activemins = 0;
-            activehrs = 0;
-            idhrs = 0;
-            idmins = 0;
-            idsecs = 0;
-            isActive = false;
-            totalsecs.Text = String.Format("{0:00}",sec);
-            acthr.Text = String.Format("{0:00}", activehrs);
-            actmin.Text = String.Format("{0:00}", activemins);
-            acthr.Text = String.Format("{0:00}", activehrs);
-            actmin.Text = String.Format("{0:00}", activemins);
-            actsec.Text = String.Format("{0:00}", activesecs);
-            idlehrs.Text = String.Format("{0:00}", idhrs);
-            idlemins.Text = String.Format("{0:00}", idmins);
-            idlesecs.Text = String.Format("{0:00}", idsecs);
-        }
+        
 
 
         [DllImport("user32.dll")]
@@ -67,7 +46,7 @@ namespace TrackMyTime
             timer1.Start();
             ResetTime();
             isActive = false;
-
+            comboBox1.SelectedIndex = 0;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -92,8 +71,8 @@ namespace TrackMyTime
 
         private void actualtime_Click(object sender, EventArgs e)
         {
-            DateTime time = DateTime.Now;
-            actualtime.Text = time.ToString("hh:mm:ss:ttt");
+            actualtime.Text = DateTime.Now.ToLongTimeString();
+
         }
 
         private void CurrentTime_Click(object sender, EventArgs e)
@@ -119,6 +98,7 @@ namespace TrackMyTime
 
         private void Startbtn1_Click(object sender, EventArgs e)
         {
+            
             activetimer.Start();
             totaltimer.Start();
             idletimer.Start();
@@ -203,22 +183,21 @@ namespace TrackMyTime
         private void idletimer_Tick(object sender, EventArgs e)
         {
             tagLASTINPUTINFO LastInput = new tagLASTINPUTINFO();
-            int IdleTime;
+            
             LastInput.cbSize = (uint)Marshal.SizeOf(LastInput);
             LastInput.dwTime = 0;
             activetimer.Start();
-            
+            int IdleTime;
+            int idleTimeFromUser = Convert.ToInt32 (this.comboBox1.SelectedItem);
+
             if (GetLastInputInfo(ref LastInput))
-            {
-                
+            {                
                 IdleTime = (System.Environment.TickCount - LastInput.dwTime) / 1000;
                 if (isActive)
                 {
-                    if (IdleTime > 10)
+                    if (IdleTime > (idleTimeFromUser * 60))
                     {
-
                         idsecs++;
-
                         if (idsecs > 59)
                         {
                             idmins++;
@@ -229,15 +208,13 @@ namespace TrackMyTime
                             idhrs++;
                             idmins = 0;
                         }
-                        activetimer.Stop();
-                        
+                        activetimer.Stop();                        
                     }
-                          idlehrs.Text = String.Format("{0:00}", idhrs);
+                        idlehrs.Text = String.Format("{0:00}", idhrs);
                         idlemins.Text = String.Format("{0:00}", idmins);
                         idlesecs.Text = String.Format("{0:00}", idsecs);
                 }
-            }
-            
+            }            
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -291,12 +268,53 @@ namespace TrackMyTime
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {            
             ResetTime();
-            isActive = false;           
-                
+            isActive = false;                           
+        }
+        private void ResetTime()
+        {
+            hr = 0;
+            min = 0;
+            sec = 0;
+            activesecs = 0;
+            activemins = 0;
+            activehrs = 0;
+            idhrs = 0;
+            idmins = 0;
+            idsecs = 0;
+            isActive = false;
+            totalsecs.Text = String.Format("{0:00}", sec);
+            acthr.Text = String.Format("{0:00}", activehrs);
+            actmin.Text = String.Format("{0:00}", activemins);
+            acthr.Text = String.Format("{0:00}", activehrs);
+            actmin.Text = String.Format("{0:00}", activemins);
+            actsec.Text = String.Format("{0:00}", activesecs);
+            comboBox1.SelectedIndex = 0;
+            idlehrs.Text = String.Format("{0:00}", idhrs);
+            idlemins.Text = String.Format("{0:00}", idmins);
+            idlesecs.Text = String.Format("{0:00}", idsecs);
+            
         }
 
-       
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void idlemins_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
